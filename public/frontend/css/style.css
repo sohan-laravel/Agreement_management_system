@@ -1,0 +1,108 @@
+.navbar{
+background-color: grey;
+}
+
+
+hr{
+	width: 100px;
+	height: 2px;
+	background-color: green;
+}
+
+.title{
+	margin-top:50px;
+	margin-bottom:70px;
+}
+
+.card{
+	border: none;
+	border-radius: 0;
+	background: rgb(  169, 238, 207);
+	color: #fff;
+	border-radius:5px;
+	box-shadow: 0px 0px 5px #44a77f ;
+}
+
+.h3{
+	font-family: 'Poppins', sans-serif;
+	font-size: 18px;
+	color: #10803f;
+}
+
+
+.card img{
+
+	width: 80%;
+	padding:10px;
+	margin: 0px auto;
+}
+
+.card p{
+	font-size: 14px;
+	line-height: 16px;
+	padding-bottom: 10px;
+	color: #323633;
+
+}
+
+
+
+
+section:nth-child(odd) {
+  background: #ffffff;
+}
+
+section:nth-child(even) {
+  background: #f8f9fa!important;
+}
+
+
+
+
+.aboutustext{
+	margin-top: 50px;
+}
+
+
+.terms_condition ul li{
+	list-style: none;
+}
+.terms_condition ul li a{
+	color: green;
+}
+.terms_condition ul li a:hover{
+	padding-left: 20px;
+	transition-duration: .9s;
+}
+.terms_condition li a:before {
+    content: "\f105";
+    font-family: FontAwesome;
+    font-size: 14px;
+    line-height: normal;
+    font-weight: normal;
+    margin-right: 7px;
+}
+.hover_effects img:hover{
+	opacity: 0.8;
+	cursor: pointer;
+	transition: transform 1.3s;
+}
+.cards_design{
+	overflow: hidden;
+	margin-bottom: 20px;
+
+}
+
+.navigation-menu ul li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .4s;
+}
+
+.navigation-menu ul li:hover::after {
+    width: 100%;
+   
+}
