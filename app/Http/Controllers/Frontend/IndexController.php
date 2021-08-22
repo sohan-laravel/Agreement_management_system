@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\About;
+use App\Footer;
 use App\Http\Controllers\Controller;
 use App\Model\Category;
 use App\Plantation;
@@ -22,8 +23,9 @@ class IndexController extends Controller
         $about = About::where('status', 1)->orderBy('id', 'desc')->get();
         $plantation = Plantation::where('status', 1)->orderBy('id', 'desc')->get();
         $plantationright = Plantationright::where('status', 1)->orderBy('id', 'desc')->get();
+        $footer = Footer::where('status', 1)->orderBy('id', 'desc')->get();
         $topbar = Topbar::orderBy('id', 'desc')->get();
-        return view('frontend.index', compact('categories', 'slider', 'product', 'about', 'plantation', 'plantationright', 'topbar'));
+        return view('frontend.index', compact('categories', 'slider', 'product', 'about', 'plantation', 'plantationright', 'footer', 'topbar'));
     }
 
     public function contact()

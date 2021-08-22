@@ -75,6 +75,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="{{ route('admin.footer.index') }}" class="nav-link {{ Route::is('admin.footer.index') ? 'active' : '' }}">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Footer
+              </p>
+            </a>
+          </li>
           
           {{-- <li class="nav-item">
             <a href="{{ route('admin.topbar.index') }}" class="nav-link {{ Route::is('admin.topbar.index') ? 'active' : '' }}">

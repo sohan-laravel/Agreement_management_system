@@ -106,3 +106,8 @@ section:nth-child(even) {
     width: 100%;
    
 }
+
+.carousel-caption{
+	padding-bottom: 200px;
+	text-align: center;
+}

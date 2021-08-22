@@ -8,11 +8,17 @@
                 <div class="col-lg-4">
                     <!-- Contact us -->
                     <h5>Contact us</h5>
-                    <i class="fa fa-phone" aria-hidden="true"></i> <span style="color: green;">01879-599465</span> <br>
-                    <a href="mailto:zerowastepac@gmail.com"> <i class="fa fa-envelope" aria-hidden="true"></i> glamworlditltd@gmail.com</a> <br>
-                    <a href="#" class="fa fa-facebook mr-3 pt-2"></a>
-                    <a href="#" class="fa fa-twitter mr-3"></a>
-                    <a href="#" class="fa fa-youtube"></a>
+
+                    @foreach ($footer as $row)
+
+                    <i class="fa fa-phone" aria-hidden="true"></i> <span style="color: green;">{{ $row->number }}</span> <br>
+                    <a href="mailto:zerowastepac@gmail.com"> <i class="fa fa-envelope" aria-hidden="true"></i> {{ $row->email }}</a> <br>
+                    <a href="{{ $row->facebook }}" target="_blank" class="fa fa-facebook mr-3 pt-2"></a>
+                    <a href="{{ $row->twitter }}" target="_blank" class="fa fa-twitter mr-3"></a>
+                    <a href="{{ $row->youtube }}" target="_blank" class="fa fa-youtube"></a>
+
+                     @endforeach
+
                 </div>
                 <div class="col-lg-4 terms_condition">
                     <!-- Terms and Conditions -->

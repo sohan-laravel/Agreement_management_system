@@ -53,18 +53,10 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'middleware' => 'au
     Route::resource('about', 'AboutController', ['names' => 'admin.about']);
     Route::post('about/inactive', 'AboutController@inactive')->name('admin.about.inactive');
 
-    //Admin Leather Care
+    //Admin Footer
 
-    Route::resource('leather', 'LeatherController', ['names' => 'admin.leather']);
-    Route::post('leather/inactive', 'LeatherController@inactive')->name('admin.leather.inactive');
-
-    //Admin Accessories left side
-
-    Route::resource('accessories-left', 'AccessleftController', ['names' => 'admin.accessleft']);
-
-    //Admin Accessories middle side
-
-    Route::resource('accessories-middle', 'AccessmiddleController', ['names' => 'admin.accessmiddle']);
+    Route::resource('footer', 'FooterController', ['names' => 'admin.footer']);
+    Route::post('footer/inactive', 'FooterController@inactive')->name('admin.footer.inactive');
 
     //Admin Topbar
 

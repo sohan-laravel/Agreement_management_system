@@ -2,7 +2,7 @@
 
         <!-- <div class="container"> -->
 
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{ route('index') }}">
             <img src="{{ asset('frontend/img/logow.png') }}" width="60">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,14 +18,27 @@
                 <li class="nav-item"><a class="nav-link text-white" href="#">Pesticide</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="#">Diseases</a></li>
 
-                <li class="nav-item dropdown">
+
+                @if (Route::has('login'))
+                <div class="collapse navbar-collapse navigation-menu">
+                    @auth
+                        <a href="{{ url('/home') }}" class="nav-item nav-link" style="color: rgb(111, 233, 12);">{{ auth()->user()->name }}</a>
+                    @else
+                        <a href="{{ route('login') }}" class="nav-item nav-link text-white">Login</a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="nav-item nav-link text-white">Register</a>
+                        @endif
+                    @endauth
+                </div>
+            @endif
+
+                {{-- <li class="nav-item dropdown">
                     <a style="color: white;" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Sign Up
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="signup/signup.html">Farmer Account</a>
-                        <a class="dropdown-item" href="signup/signup.html">Customer Account</a>
-                        <a class="dropdown-item" href="signup/signup.html">Worker Account</a>
+                        <a class="dropdown-item" href="{{ route('register') }}">Customer Account</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -33,11 +46,9 @@
                         Log In
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="login/login.html">Farmer</a>
-                        <a class="dropdown-item" href="login/login.html">Customer</a>
-                        <a class="dropdown-item" href="login/login.html">Worker</a>
+                        <a class="dropdown-item" href="{{ route('login') }}">Customer</a>   
                     </div>
-                </li>
+                </li> --}}
 
             </ul>
         </div>
